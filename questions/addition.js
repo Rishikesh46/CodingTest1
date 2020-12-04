@@ -3,9 +3,24 @@
 2. Throw and error with message "Invalid Input" when no arguments are passed. 
 3. Detect non numeric input and throw an error with message "Invalid Input"
 */
-
 const addition = (...numbers) => {
-  // all your code
+
+  if (numbers.length != 0) {
+
+    let sum = 0;
+    numbers.forEach((num) => {
+
+      if (isNaN(parseInt(num))) {
+
+        throw new Error("Invalid Input");
+      }
+      sum = sum + num;
+    });
+    return sum;
+  } else {
+    
+    throw new Error("Invalid Input");
+  }
 };
 
 module.exports = addition;

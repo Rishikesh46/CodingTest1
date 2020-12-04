@@ -6,6 +6,16 @@ Count the frequency of a vowels in a given string.
 3. In case numbers are passed it shoul throw an error with message "Invalid Input"
 */
 
-const frequencyCounter = (str) => {};
+const frequencyCounter = (str) => {
 
+  Array.from(str)
+   .filter(letter => 'aeiou'.includes(letter)).length;
+   
+ 
+ console.log(frequencyCounter('abcdefghijklmnopqrstuvwxyz')); // 5
+ console.log(frequencyCounter('test')); // 1
+ console.log(frequencyCounter('ddd'));
+ console.log(frequencyCounter("aeeeee"))
+
+}
 module.exports = frequencyCounter;
